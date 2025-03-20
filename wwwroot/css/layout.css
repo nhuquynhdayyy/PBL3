@@ -1,0 +1,208 @@
+    /* ========== Navbar ========== */
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(135deg, #3a98f0, #0f172a) !important; /* Xanh sáng sang xanh đậm */
+        padding: 12px 20px; /* Tăng padding để làm navbar dài hơn */
+        min-height: 70px; /* Đảm bảo chiều cao lớn hơn */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    /* Đảm bảo navbar không bị tràn */
+    .navbar {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    /* Cập nhật body để không bị che khuất */
+    body {
+        margin-top: 80px; /* Điều chỉnh theo chiều cao của navbar */
+    }
+
+    /* Tăng độ rõ ràng cho chữ */
+    .navbar a, .navbar .nav-link {
+        color: #f8f9fa !important;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    /* Hiệu ứng hover */
+    .navbar a:hover, .navbar .nav-link:hover {
+        color: #22d3ee !important;
+    }
+
+    /* Căn giữa các mục trong navbar */
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Đảm bảo logo và text không bị vỡ dòng */
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    /* Đảm bảo các mục menu căn giữa theo chiều dọc */
+    .navbar-nav .nav-item {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Căn chỉnh thanh tìm kiếm */
+    .navbar .search-box {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Định dạng input tìm kiếm */
+    .navbar .search-box input {
+        height: 40px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    /* Định dạng icon trong navbar */
+    .navbar .nav-link i,
+    .navbar .search-box button i {
+        font-size: 18px;
+        margin-right: 6px;
+    }
+
+    /* Căn giữa dropdown menu */
+    .navbar .dropdown-menu {
+        text-align: center;
+    }
+
+    /* Hiệu ứng khi active */
+    .navbar-nav .nav-item .nav-link.active {
+        color: #fff !important;
+        background-color: #1e40af !important;
+        border-radius: 6px;
+        padding: 10px 14px;
+    }
+
+    /* ========== Hiệu ứng Fade-In ========== */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    /* ========== Buttons ========== */
+    a {
+        color: #0077cc;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #1b6ec2;
+        border-color: #1861ac;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
+        color: #fff;
+        background-color: #1b6ec2;
+        border-color: #1861ac;
+    }
+
+    /* ========== Borders & Shadows ========== */
+    .border-top {
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .box-shadow {
+        box-shadow: 0 .25rem .75rem rgba(8, 164, 255, 0.05);
+    }
+
+    /* ========== Buttons ========== */
+    button.accept-policy {
+        font-size: 1rem;
+        line-height: inherit;
+    }
+
+    /* ========== Carousel ========== */
+    .carousel {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Full chiều cao màn hình */
+        overflow: hidden;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ảnh full màn hình, không bị méo */
+    }
+
+    .carousel-caption {
+        position: absolute;
+        bottom: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        background: rgba(19, 190, 94, 0.5);
+        padding: 15px 20px;
+        border-radius: 10px;
+        max-width: 80%;
+    }
+
+    .carousel-caption h2 {
+        color: white;
+        font-weight: bold;
+    }
+
+    /* ========== Contact Info ========== */
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        padding: 10px 0;
+        background: #f8f9fa;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #007932;
+        white-space: nowrap;
+        height: 100%;
+
+    }
+
+    .contact-item i {
+        font-size: 20px;
+        width: 25px;
+        height: 100%;
+    }
+    body {
+        background: linear-gradient(135deg, rgba(0, 2, 7, 0.5), rgba(2, 2, 18, 0.84)) !important;
+    }
+
+    
+
+   

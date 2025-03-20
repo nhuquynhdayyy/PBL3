@@ -1236,11 +1236,7 @@ C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\TourismWeb.MvcApplicationPartsAssemblyInf
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\TourismWeb.RazorAssemblyInfo.cache
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\TourismWeb.RazorAssemblyInfo.cs
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\TourismWeb.sourcelink.json
-C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\scopedcss\bundle\TourismWeb.styles.css
-C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\scopedcss\projectbundle\TourismWeb.bundle.scp.css
-C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\compressed\e1nq74b8jn-b9sayid5wm.gz
-C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\compressed\uq7xg0k97k-zpcigqv86i.gz
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\compressed\4yfxfhdncb-61n19gt1b8.gz
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\compressed\le2l7rmfe9-xtxxf3hu2r.gz
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\compressed\m413ykumak-t1cqhe9u97.gz
@@ -1302,8 +1298,6 @@ C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\compressed\aragfkc5v0-jjsuc0puko.gz
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\compressed\6ia6aa5ght-9vr69e8ynj.gz
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\compressed\ioblpt425j-87fc7y1x7t.gz
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\compressed\hmojmjogpp-mlv21k5csn.gz
-C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\compressed\r1clppza9n-b5g31djcje.gz
-C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\compressed\byxunk3289-b5g31djcje.gz
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -1319,3 +1313,5 @@ C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\refint\TourismWeb.dll
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\TourismWeb.pdb
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\TourismWeb.genruntimeconfig.cache
 C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\ref\TourismWeb.dll
+C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\compressed\yljvie71jl-nhbxhpj1rv.gz
+C:\Users\KOANH\PBL3-1\obj\Debug\net9.0\compressed\tk080zu9jp-r814dbllyk.gz

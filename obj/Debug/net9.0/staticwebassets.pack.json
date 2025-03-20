@@ -1,20 +1,24 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\KOANH\\PBL3-1\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TourismWeb.bundle.scp.css",
-      "PackagePath": "staticwebassets\\TourismWeb.b5g31djcje.bundle.scp.css"
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
     },
     {
-      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
-      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\css\\style.css",
-      "PackagePath": "staticwebassets\\css\\style.css"
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\css\\layout.css",
+      "PackagePath": "staticwebassets\\css\\layout.css"
     },
     {
       "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\avatar1.png",
+      "PackagePath": "staticwebassets\\images\\avatar1.png"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\codohue.jpg",
+      "PackagePath": "staticwebassets\\images\\codohue.jpg"
     },
     {
       "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\danang.jpg",
@@ -27,6 +31,54 @@
     {
       "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\hue.jpg",
       "PackagePath": "staticwebassets\\images\\hue.jpg"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\logo.webp",
+      "PackagePath": "staticwebassets\\images\\logo.webp"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\logo1.webp",
+      "PackagePath": "staticwebassets\\images\\logo1.webp"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\nhatrang.jpg",
+      "PackagePath": "staticwebassets\\images\\nhatrang.jpg"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\phongnha.jpg",
+      "PackagePath": "staticwebassets\\images\\phongnha.jpg"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\phuyen.jpg",
+      "PackagePath": "staticwebassets\\images\\phuyen.jpg"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\quangngai.jpg",
+      "PackagePath": "staticwebassets\\images\\quangngai.jpg"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\sacmaudanang.webp",
+      "PackagePath": "staticwebassets\\images\\sacmaudanang.webp"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\songhuong.jpg",
+      "PackagePath": "staticwebassets\\images\\songhuong.jpg"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\xinchao.jpg",
+      "PackagePath": "staticwebassets\\images\\xinchao.jpg"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\xinchao1.jpg",
+      "PackagePath": "staticwebassets\\images\\xinchao1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\xinchao2.jpg",
+      "PackagePath": "staticwebassets\\images\\xinchao2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\images\\xinchao3.jpg",
+      "PackagePath": "staticwebassets\\images\\xinchao3.jpg"
     },
     {
       "Id": "C:\\Users\\KOANH\\PBL3-1\\wwwroot\\js\\site.js",

@@ -1,50 +1,193 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@ViewData["Title"] - TourismWeb</title>
-    <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/TourismWeb.styles.css" asp-append-version="true" />
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+    @RenderSection("Styles", required: false)
+
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TourismWeb</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+
+<body class="d-flex flex-column min-vh-100 w-100">
+
+    <!-- Carousel - Chỉ có trên trang chủ -->
+    <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/images/xinchao1.jpg" class="d-block w-100" alt="Chào mừng">
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+            <div class="carousel-item">
+                <img src="/images/xinchao2.jpg" class="d-block w-100" alt="Chào mừng">
+            </div>
+            <div class="carousel-item">
+                <img src="/images/xinchao3.jpg" class="d-block w-100" alt="Chào mừng">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            &copy; 2025 - TourismWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">TourismWeb</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">
+                            <i class="fas fa-home"></i> Trang chủ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Location" asp-action="Index">
+                            <i class="fas fa-map-marker-alt"></i> Địa điểm
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Guide" asp-action="Index">
+                            <i class="fas fa-book"></i> Cẩm nang du lịch
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Experience" asp-action="Index">
+                            <i class="fas fa-walking"></i> Trải nghiệm
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Contact" asp-action="Index">
+                            <i class="fas fa-envelope"></i> Liên hệ
+                        </a>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Tìm kiếm...">
+                    <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="dropdown ms-3">
+                    <button class="btn btn-outline-light dropdown-toggle" type="button" id="userMenu"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+                        <li><a class="dropdown-item" asp-controller="Users" asp-action="Login">Đăng nhập</a></li>
+                        <li><a class="dropdown-item" asp-controller="Users" asp-action="Register">Đăng ký</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    </nav>
+
+    <main role="main" class="flex-grow-1">
+        <div class="container py-4">
+            @RenderBody()
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var swiper = new Swiper(".swiper-container", {
+                slidesPerView: 3, // Hiển thị 3 bài viết cùng lúc
+                spaceBetween: 40, // Khoảng cách giữa các bài viết
+                centeredSlides: "auto", /* Căn giữa slide */
+                loop: true, // Chạy vòng lặp
+                autoplay: {
+                    delay: 4000, // 3 giây chạy 1 lần
+                    disableOnInteraction: false, // Tiếp tục chạy ngay cả khi người dùng tương tác
+                },
+                speed: 1000, // Tốc độ chuyển slide (1 giây)
+
+                centerInsufficientSlides: false,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                grabCursor: true
+            });
+        });
+
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    <footer class="bg-dark text-light text-center py-3 mt-auto">
+        <div class="container">
+            &copy; 2025 - TourismWeb - <a asp-controller="Home" asp-action="Privacy" class="text-light">Privacy</a>
+        </div>
+
+        <section class="footer-wrapper">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="~/images/logo1.webp" alt="Logo">
+                    <p>WELCOME TourismWeb!</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Điều hướng</h4>
+                    <ul>
+                        <li><a href="/">Trang chủ</a></li>
+                        <li><a href="/diadiem">Địa điểm</a></li>
+                        <li><a href="/camnang">Cẩm nang du lịch</a></li>
+                        <li><a href="/trainghiem">Trải nghiệm</a></li>
+                        <li><a href="/lienhe">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-instagram">
+                    <h4>Instagram</h4>
+                    <div class="footer-gallery">
+                        <img src="~/images/danang.jpg" alt="">
+                        <img src="~/images/hoian.jpg" alt="">
+                        <img src="~/images/hue.jpg" alt="">
+                        <img src="~/images/nhatrang.jpg" alt="">
+                        <img src="~/images/phongnha.jpg" alt="">
+                        <img src="~/images/xinchao3.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="footer-subscribe">
+                    <h4>Theo dõi</h4>
+                    <p>Đăng ký nhận tin tức</p>
+                    <input type="email" placeholder="Email...">
+                    <button>ĐĂNG KÝ</button>
+                </div>
+
+            </div>
+        </section>
+    </footer>
+
 </body>
+
 </html>
