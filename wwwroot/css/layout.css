@@ -1,208 +1,342 @@
-    /* ========== Navbar ========== */
-    .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: linear-gradient(135deg, #3a98f0, #0f172a) !important; /* Xanh sáng sang xanh đậm */
-        padding: 12px 20px; /* Tăng padding để làm navbar dài hơn */
-        min-height: 70px; /* Đảm bảo chiều cao lớn hơn */
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-    }
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #2c3e50, #1a252f) !important;
+    padding: 12px 20px;
+    min-height: 65px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
-    /* Đảm bảo navbar không bị tràn */
-    .navbar {
-        max-width: 100%;
-        overflow: hidden;
-    }
+/* Logo & Navbar Brand */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #f8f9fa;
+    text-transform: uppercase;
+    margin-right: auto;
+}
 
-    /* Cập nhật body để không bị che khuất */
-    body {
-        margin-top: 80px; /* Điều chỉnh theo chiều cao của navbar */
-    }
+/* Menu */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap; /* Ngăn chữ xuống dòng */
+    overflow-x: auto; /* Cuộn ngang nếu không đủ chỗ */
+    white-space: nowrap; /* Giữ chữ trên một dòng */
+}
 
-    /* Tăng độ rõ ràng cho chữ */
-    .navbar a, .navbar .nav-link {
-        color: #f8f9fa !important;
-        font-weight: 600;
-        font-size: 16px;
-    }
+.navbar-nav .nav-item {
+    padding: 0;
+}
+.navbar-nav .nav-link {
+    color: #f8f9fa;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+.navbar-nav .nav-link:hover {
+    color: #38bdf8;
+    text-decoration: none;
+}
 
-    /* Hiệu ứng hover */
-    .navbar a:hover, .navbar .nav-link:hover {
-        color: #22d3ee !important;
-    }
+/* Hiệu ứng mục đang chọn */
+.navbar-nav .nav-item .nav-link.active {
+    color: #fff;
+    background: linear-gradient(135deg, #ff6600, #ff3300);
+    border-radius: 4px;
+    padding: 10px 14px;
+}
 
-    /* Căn giữa các mục trong navbar */
-    .navbar-nav {
-        display: flex;
-        align-items: center;
-    }
+/* Thanh tìm kiếm */
+.navbar .search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+.navbar .search-box input {
+    height: 36px;
+    padding: 6px 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+.navbar .search-box button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
 
-    /* Đảm bảo logo và text không bị vỡ dòng */
-    .navbar-brand {
-        display: flex;
-        align-items: center;
-        white-space: nowrap;
-        font-size: 22px;
-        font-weight: bold;
-    }
+/* Dropdown menu */
+.navbar .dropdown-menu {
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 6px;
+    border: none;
+}
+.navbar .dropdown-menu a {
+    color: #f8f9fa;
+    font-weight: 500;
+    padding: 10px;
+}
+.navbar .dropdown-menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
 
-    /* Đảm bảo các mục menu căn giữa theo chiều dọc */
-    .navbar-nav .nav-item {
-        display: flex;
-        align-items: center;
-    }
+/* ================= FOOTER ================= */
+footer {
+    width: 100%;
+    background: linear-gradient(135deg, #1c1c1c, #111);
+    color: #fff;
+    padding: 20px 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+}
 
-    /* Căn chỉnh thanh tìm kiếm */
-    .navbar .search-box {
-        display: flex;
-        align-items: center;
-    }
+/* ================= FOOTER CONTENT ================= */
+.footer-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
 
-    /* Định dạng input tìm kiếm */
-    .navbar .search-box input {
-        height: 40px;
-        padding: 8px 12px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-    }
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
-    /* Định dạng icon trong navbar */
-    .navbar .nav-link i,
-    .navbar .search-box button i {
-        font-size: 18px;
-        margin-right: 6px;
-    }
+/* LOGO */
+.footer-logo {
+    width: 25%;
+    text-align: center;
+}
 
-    /* Căn giữa dropdown menu */
-    .navbar .dropdown-menu {
-        text-align: center;
-    }
+.footer-logo img {
+    width: 120px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
 
-    /* Hiệu ứng khi active */
-    .navbar-nav .nav-item .nav-link.active {
-        color: #fff !important;
-        background-color: #1e40af !important;
-        border-radius: 6px;
-        padding: 10px 14px;
-    }
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
 
-    /* ========== Hiệu ứng Fade-In ========== */
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+.footer-logo p {
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
 
-    .fade-in {
-        animation: fadeIn 0.8s ease-in-out;
-    }
+/* SOCIAL MEDIA ICONS */
+.footer-social a {
+    color: #fff;
+    font-size: 22px;
+    margin: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
 
-    /* ========== Buttons ========== */
-    a {
-        color: #0077cc;
-    }
+.footer-social a:hover {
+    color: #ff6600;
+    transform: translateY(-3px);
+}
 
-    .btn-primary {
-        color: #fff;
-        background-color: #1b6ec2;
-        border-color: #1861ac;
-    }
+/* FOOTER COLUMNS */
+.footer-links, .footer-instagram, .footer-subscribe {
+    width: 20%;
+}
+/* Dịch phần Điều hướng và Instagram sang trái */
+.footer-links, .footer-instagram {
+    transform: translateX(-50px); /* Dịch sang trái 30px */
+}
 
-    .nav-pills .nav-link.active,
-    .nav-pills .show > .nav-link {
-        color: #fff;
-        background-color: #1b6ec2;
-        border-color: #1861ac;
-    }
+/* Cố định vị trí phần Theo dõi */
+.footer-follow {
+    transform: translateX(0); /* Giữ nguyên */
+}
 
-    /* ========== Borders & Shadows ========== */
-    .border-top {
-        border-top: 1px solid #e5e5e5;
-    }
+.footer-links h4, 
+.footer-instagram h4, 
+.footer-subscribe h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
 
-    .border-bottom {
-        border-bottom: 1px solid #e5e5e5;
-    }
+/* Tạo thanh underline với icon */
+.footer-links h4::after, 
+.footer-instagram h4::after, 
+.footer-subscribe h4::after {
+    content: "";
+    display: inline-block;
+    width: 50px; /* Độ dài underline */
+    height: 3px; /* Độ dày underline */
+    background: #ff6600;
+    margin-left: 10px;
+    position: relative;
+}
 
-    .box-shadow {
-        box-shadow: 0 .25rem .75rem rgba(8, 164, 255, 0.05);
-    }
+/* Thêm chấm tròn */
+.footer-links h4::before, 
+.footer-instagram h4::before, 
+.footer-subscribe h4::before {
+    content: "⦿"; /* Unicode của hình tròn */
+    color: #ff6600;
+    font-size: 12px;
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+}
 
-    /* ========== Buttons ========== */
-    button.accept-policy {
-        font-size: 1rem;
-        line-height: inherit;
-    }
 
-    /* ========== Carousel ========== */
-    .carousel {
-        position: relative;
-        width: 100%;
-        height: 100vh; /* Full chiều cao màn hình */
-        overflow: hidden;
-    }
+/* LINKS */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
 
-    .carousel img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ảnh full màn hình, không bị méo */
-    }
+.footer-links ul li {
+    margin: 6px 0;
+    display: flex;
+    align-items: center; /* Giúp căn đều theo chiều ngang */
+}
 
-    .carousel-caption {
-        position: absolute;
-        bottom: 30%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        background: rgba(19, 190, 94, 0.5);
-        padding: 15px 20px;
-        border-radius: 10px;
-        max-width: 80%;
-    }
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+.footer-links ul li::before {
+    content: "❯"; /* Hoặc ">" */
+    color: #ff6600;
+    font-size: 14px;
+    margin-right: 8px;
+}
 
-    .carousel-caption h2 {
-        color: white;
-        font-weight: bold;
-    }
+.footer-links ul li a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
 
-    /* ========== Contact Info ========== */
-    .contact-info {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        padding: 10px 0;
-        background: #f8f9fa;
-        flex-wrap: nowrap;
-        width: 100%;
-    }
+/* INSTAGRAM GRID */
+.footer-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-    .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #007932;
-        white-space: nowrap;
-        height: 100%;
+.footer-gallery img {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
 
-    }
+.footer-gallery img:hover {
+    transform: scale(1.1);
+}
 
-    .contact-item i {
-        font-size: 20px;
-        width: 25px;
-        height: 100%;
-    }
-    body {
-        background: linear-gradient(135deg, rgba(0, 2, 7, 0.5), rgba(2, 2, 18, 0.84)) !important;
-    }
+/* SUBSCRIBE FORM */
+.footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Căn nội dung về trái */
+    text-align: left; /* Căn chữ về trái */
+}
 
-    
+.footer-subscribe h4 {
+    align-self: flex-start; /* ĐảmF bảo tiêu đề căn trái */
+}
 
-   
+.footer-subscribe input {
+    width: 100%; /* Đảm bảo input rộng theo container */
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(255, 102, 0, 0.3);
+}
+
+.footer-subscribe button {
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: auto;
+    align-self: flex-start; /* Căn nút về bên trái */
+}
+
+.footer-subscribe h3 {
+    margin-left: 0; /* Đảm bảo tiêu đề không bị lệch */
+}
+
+
+.footer-subscribe p {
+    margin: 5px 0 10px 0; /* Điều chỉnh khoảng cách nếu cần */
+    text-align: left;
+    align-self: flex-start; /* Căn trái chính xác */
+}
+
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
+    gap: 50px; /* Điều chỉnh khoảng cách giữa các cột */
+}
+
+.footer-links, .footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-content {
+    margin-top: 20px;
+}
+
+ 
+body {
+    background: linear-gradient(135deg, rgba(242, 230, 220, 0.911), rgba(174, 219, 233, 0.34)) !important;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Tránh xuất hiện thanh cuộn ngang */
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+

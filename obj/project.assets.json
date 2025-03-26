@@ -7418,11 +7418,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KOANH\\PBL3-1\\TourismWeb.csproj",
+      "projectUniqueName": "C:\\Users\\KOANH\\PBL3\\TourismWeb.csproj",
       "projectName": "TourismWeb",
-      "projectPath": "C:\\Users\\KOANH\\PBL3-1\\TourismWeb.csproj",
+      "projectPath": "C:\\Users\\KOANH\\PBL3\\TourismWeb.csproj",
       "packagesPath": "C:\\Users\\KOANH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KOANH\\PBL3-1\\obj\\",
+      "outputPath": "C:\\Users\\KOANH\\PBL3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

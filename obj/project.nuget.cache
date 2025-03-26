@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9/sFBWXNZIY=",
+  "dgSpecHash": "CbW81qy8jpI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\KOANH\\PBL3-1\\TourismWeb.csproj",
+  "projectFilePath": "C:\\Users\\KOANH\\PBL3\\TourismWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KOANH\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\KOANH\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
