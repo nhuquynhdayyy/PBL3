@@ -1970,5 +1970,8 @@ C:\Users\KOANH\PBL3\obj\Debug\net9.0\refint\TourismWeb.dll
 C:\Users\KOANH\PBL3\obj\Debug\net9.0\TourismWeb.pdb
 C:\Users\KOANH\PBL3\obj\Debug\net9.0\TourismWeb.genruntimeconfig.cache
 C:\Users\KOANH\PBL3\obj\Debug\net9.0\ref\TourismWeb.dll
-C:\Users\KOANH\PBL3\obj\Debug\net9.0\compressed\yljvie71jl-gy5s7wgjrh.gz
-C:\Users\KOANH\PBL3\obj\Debug\net9.0\compressed\tk080zu9jp-o43axt6j0r.gz
+C:\Users\KOANH\PBL3\obj\Debug\net9.0\compressed\noqcdaocax-qf3fi8882i.gz
+C:\Users\KOANH\PBL3\obj\Debug\net9.0\compressed\tk080zu9jp-h3ad1h3x8b.gz
+C:\Users\KOANH\PBL3\obj\Debug\net9.0\compressed\mmfoti1uct-n68j1xxasz.gz
+C:\Users\KOANH\PBL3\obj\Debug\net9.0\compressed\yljvie71jl-b1fv9s4vyy.gz
+C:\Users\KOANH\PBL3\obj\Debug\net9.0\compressed\3zhvn2qyo5-hlfv9w4shf.gz
