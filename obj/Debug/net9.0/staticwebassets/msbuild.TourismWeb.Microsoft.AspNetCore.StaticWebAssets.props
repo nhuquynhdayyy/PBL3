@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>656ecx0wz3</Fingerprint>
-      <Integrity>ZjlcifJ5zzDPRCNz0WJnFMgF3UJYwkE0f+Oe0jhQUgk=</Integrity>
+      <Fingerprint>e2238lt34y</Fingerprint>
+      <Integrity>ysbl/Oy+9Yfl1cRP8yt3XGlqhVNXmySPMiYo+yN7bM8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\contact.css'))</OriginalItemSpec>

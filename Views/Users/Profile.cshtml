@@ -154,73 +154,28 @@
             border-bottom: 2px solid #0077b6;
             color: #0077b6;
         }
-        
-        .memories-grid {
+                
+        .photo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 0.5rem;
         }
         
-        .memory-card {
-            border-radius: 10px;
+        .photo-item {
+            height: 150px;
+            border-radius: 5px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transition: transform 0.3s;
         }
         
-        .memory-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .memory-image {
-            height: 150px;
-            width: 100%;
-            object-fit: cover;
-        }
-        
-        .memory-content {
-            padding: 1rem;
-        }
-        
-        .memory-title {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        
-        .memory-date {
-            color: #666;
-            font-size: 0.875rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .memory-description {
-            font-size: 0.875rem;
-            color: #333;
-            margin-bottom: 1rem;
-        }
-        
-        .memory-actions {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .memory-likes {
-            color: #f4a261;
-        }
-        
-        .memory-button {
-            background-color: #0077b6;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .memory-button:hover {
-            background-color: #023e8a;
+        .photo-item:hover img {
+            transform: scale(1.05);
         }
         
         .travel-inspiration {
@@ -306,59 +261,57 @@
             color: #666;
         }
         
-        .map-container {
-            height: 300px;
+        .favorite-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .favorite-post-card {
             border-radius: 10px;
             overflow: hidden;
-            margin-bottom: 1rem;
-        }
-        
-        .map-placeholder {
-            width: 100%;
-            height: 100%;
-            background-color: #e0e0e0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #666;
-        }
-        
-        .visited-countries {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        
-        .country-badge {
-            background-color: #e0f2fe;
-            color: #0077b6;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-        }
-        
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 0.5rem;
-        }
-        
-        .photo-item {
-            height: 150px;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        
-        .photo-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
         
-        .photo-item:hover img {
-            transform: scale(1.05);
+        .favorite-post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .favorite-post-image {
+            height: 160px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .favorite-post-content {
+            padding: 1rem;
+            background-color: white;
+        }
+        
+        .favorite-post-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .favorite-post-author {
+            display: flex;
+            align-items: center;
+            margin-top: 0.75rem;
+        }
+        
+        .favorite-post-author-img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        
+        .favorite-post-author-name {
+            font-size: 0.75rem;
+            color: #666;
         }
         
         footer {
@@ -426,14 +379,14 @@
                 width: 100%;
                 height: 180px;
             }
+            
+            .favorite-posts {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         @@media (max-width: 480px) {
             .footer-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .memories-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -443,6 +396,10 @@
             
             .photo-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .favorite-posts {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -457,75 +414,22 @@
                 
                 <div class="profile-stats">
                     <div class="stat-item">
-                        <div class="stat-number">9</div>
-                        <div class="stat-label">Quốc gia</div>
-                    </div>
-                    <div class="stat-item">
                         <div class="stat-number">23</div>
                         <div class="stat-label">Bài viết</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">142</div>
-                        <div class="stat-label">Kỷ niệm</div>
                     </div>
                 </div>
                 
                 <ul class="profile-menu">
-                    <li><a href="#">Trang cá nhân</a></li>
-                    <li><a href="#">Kỷ niệm du lịch</a></li>
+                    <li><a href="#">Hồ sơ</a></li>
                     <li><a href="#">Bộ sưu tập ảnh</a></li>
                     <li><a href="#">Bài viết của tôi</a></li>
-                    <li><a href="#">Địa điểm yêu thích</a></li>
+                    <li><a href="#">My favourite</a></li>
                     <li><a href="#">Cài đặt tài khoản</a></li>
                     <li><a href="#">Đăng xuất</a></li>
                 </ul>
             </div>
             
             <div class="profile-content">
-                <div class="content-section">
-                    <h3 class="section-title">Kỷ niệm du lịch</h3>
-                    <div class="memories-grid">
-                        <div class="memory-card">
-                            <img src="/api/placeholder/250/150" alt="Đà Lạt" class="memory-image">
-                            <div class="memory-content">
-                                <div class="memory-title">Sương sớm Đà Lạt</div>
-                                <div class="memory-date">10/03/2025</div>
-                                <div class="memory-description">Sương sớm bao phủ thành phố Đà Lạt tạo nên khung cảnh kỳ ảo như chốn tiên cảnh.</div>
-                                <div class="memory-actions">
-                                    <div class="memory-likes">❤️ 42 lượt thích</div>
-                                    <button class="memory-button">Xem chi tiết</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="memory-card">
-                            <img src="/api/placeholder/250/150" alt="Phú Quốc" class="memory-image">
-                            <div class="memory-content">
-                                <div class="memory-title">Hoàng hôn Phú Quốc</div>
-                                <div class="memory-date">22/01/2025</div>
-                                <div class="memory-description">Hoàng hôn rực rỡ trên bãi biển Phú Quốc, một trong những khoảnh khắc khó quên.</div>
-                                <div class="memory-actions">
-                                    <div class="memory-likes">❤️ 68 lượt thích</div>
-                                    <button class="memory-button">Xem chi tiết</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="memory-card">
-                            <img src="/api/placeholder/250/150" alt="Hội An" class="memory-image">
-                            <div class="memory-content">
-                                <div class="memory-title">Đêm hội đèn lồng</div>
-                                <div class="memory-date">07/12/2024</div>
-                                <div class="memory-description">Phố cổ Hội An lung linh với hàng ngàn đèn lồng trong đêm rằm tháng giêng.</div>
-                                <div class="memory-actions">
-                                    <div class="memory-likes">❤️ 55 lượt thích</div>
-                                    <button class="memory-button">Xem chi tiết</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
                 <div class="content-section">
                     <h3 class="section-title">Bộ sưu tập ảnh</h3>
                     <div class="photo-grid">
@@ -557,57 +461,39 @@
                 </div>
                 
                 <div class="content-section">
-                    <h3 class="section-title">Bản đồ du lịch cá nhân</h3>
-                    <div class="map-container">
-                        <div class="map-placeholder">Bản đồ các địa điểm đã ghé thăm</div>
-                    </div>
-                    <div class="visited-countries">
-                        <span class="country-badge">Việt Nam</span>
-                        <span class="country-badge">Thái Lan</span>
-                        <span class="country-badge">Nhật Bản</span>
-                        <span class="country-badge">Singapore</span>
-                        <span class="country-badge">Malaysia</span>
-                        <span class="country-badge">Hàn Quốc</span>
-                        <span class="country-badge">Campuchia</span>
-                        <span class="country-badge">Trung Quốc</span>
-                        <span class="country-badge">Úc</span>
-                    </div>
-                </div>
-                
-                <div class="content-section">
                     <h3 class="section-title">Địa điểm yêu thích</h3>
                     <div class="travel-inspiration">
                         <div class="inspiration-card">
-                            <img src="/api/placeholder/250/200" alt="Bali" class="inspiration-image">
+                            <img src="/api/placeholder/250/200" alt="Huế" class="inspiration-image">
                             <div class="inspiration-content">
-                                <div class="inspiration-title">Bali, Indonesia</div>
-                                <div class="inspiration-description">Đền đài, bãi biển và văn hóa độc đáo của hòn đảo thiên đường.</div>
+                                <div class="inspiration-title">Huế, Thừa Thiên Huế</div>
+                                <div class="inspiration-description">Cố đô với hệ thống di tích lăng tẩm, hoàng thành và ẩm thực cung đình độc đáo.</div>
                                 <div class="inspiration-meta">
-                                    <span>Thời gian tốt nhất: Tháng 5-9</span>
+                                    <span>Thời gian tốt nhất: Tháng 3-8</span>
                                     <span>Đã lưu</span>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="inspiration-card">
-                            <img src="/api/placeholder/250/200" alt="Iceland" class="inspiration-image">
+                            <img src="/api/placeholder/250/200" alt="Đà Nẵng" class="inspiration-image">
                             <div class="inspiration-content">
-                                <div class="inspiration-title">Iceland</div>
-                                <div class="inspiration-description">Khám phá thiên nhiên kỳ vĩ, suối nước nóng và hiện tượng cực quang.</div>
+                                <div class="inspiration-title">Đà Nẵng</div>
+                                <div class="inspiration-description">Thành phố biển hiện đại với Bà Nà Hills, Ngũ Hành Sơn và bãi biển Mỹ Khê tuyệt đẹp.</div>
                                 <div class="inspiration-meta">
-                                    <span>Thời gian tốt nhất: Tháng 9-3</span>
+                                    <span>Thời gian tốt nhất: Tháng 2-8</span>
                                     <span>Đã lưu</span>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="inspiration-card">
-                            <img src="/api/placeholder/250/200" alt="Maldives" class="inspiration-image">
+                            <img src="/api/placeholder/250/200" alt="Phong Nha" class="inspiration-image">
                             <div class="inspiration-content">
-                                <div class="inspiration-title">Maldives</div>
-                                <div class="inspiration-description">Thiên đường biển với làn nước trong vắt và các khu nghỉ dưỡng sang trọng.</div>
+                                <div class="inspiration-title">Phong Nha, Quảng Bình</div>
+                                <div class="inspiration-description">Vườn quốc gia với hệ thống hang động kỳ vĩ bậc nhất thế giới và cảnh quan thiên nhiên hoang sơ.</div>
                                 <div class="inspiration-meta">
-                                    <span>Thời gian tốt nhất: Tháng 11-4</span>
+                                    <span>Thời gian tốt nhất: Tháng 3-8</span>
                                     <span>Đã lưu</span>
                                 </div>
                             </div>
@@ -616,7 +502,7 @@
                 </div>
                 
                 <div class="content-section">
-                    <h3 class="section-title">Bài viết du lịch của tôi</h3>
+                    <h3 class="section-title">Đánh giá của tôi</h3>
                     <div class="blog-list">
                         <div class="blog-item">
                             <img src="/api/placeholder/200/150" alt="Ẩm thực Hội An" class="blog-image">
@@ -631,10 +517,10 @@
                         </div>
                         
                         <div class="blog-item">
-                            <img src="/api/placeholder/200/150" alt="Du lịch tiết kiệm" class="blog-image">
+                            <img src="/api/placeholder/200/150" alt="Du lịch Lý Sơn" class="blog-image">
                             <div class="blog-content">
-                                <div class="blog-title">Bí quyết du lịch tiết kiệm cho người lần đầu đi Nhật Bản</div>
-                                <div class="blog-preview">Kinh nghiệm tiết kiệm chi phí khi du lịch Nhật Bản từ chỗ ở, đi lại, ăn uống...</div>
+                                <div class="blog-title">Bí quyết du lịch tiết kiệm cho người lần đầu đến Lý Sơn, Quảng Ngãi</div>
+                                <div class="blog-preview">Kinh nghiệm tiết kiệm chi phí khi du lịch Lý Sơn từ chỗ ở, đi lại, ăn uống...</div>
                                 <div class="blog-meta">
                                     <span>Đăng ngày: 07/02/2025</span>
                                     <span>412 lượt xem</span>
@@ -643,10 +529,10 @@
                         </div>
                         
                         <div class="blog-item">
-                            <img src="/api/placeholder/200/150" alt="Trekking Sapa" class="blog-image">
+                            <img src="/api/placeholder/200/150" alt="Trekking Bạch Mã" class="blog-image">
                             <div class="blog-content">
-                                <div class="blog-title">Trải nghiệm trekking Sapa: Hướng dẫn chi tiết cho người mới bắt đầu</div>
-                                <div class="blog-preview">Chuẩn bị gì, đi như thế nào và những lưu ý quan trọng khi trekking ở Sapa...</div>
+                                <div class="blog-title">Trải nghiệm trekking Bạch Mã: Hướng dẫn chi tiết cho người mới bắt đầu</div>
+                                <div class="blog-preview">Chuẩn bị gì, đi như thế nào và những lưu ý quan trọng khi trekking ở Vườn Quốc gia Bạch Mã...</div>
                                 <div class="blog-meta">
                                     <span>Đăng ngày: 25/03/2025</span>
                                     <span>189 lượt xem</span>
@@ -655,47 +541,57 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="content-section">
+                    <h3 class="section-title">Bài viết yêu thích</h3>
+                    <div class="favorite-posts">
+                        <div class="favorite-post-card">
+                            <img src="/api/placeholder/250/160" alt="Hội An" class="favorite-post-image">
+                            <div class="favorite-post-content">
+                                <div class="favorite-post-title">Top 10 điểm tham quan không thể bỏ lỡ ở Hội An</div>
+                                <div class="favorite-post-author">
+                                    <img src="/api/placeholder/30/30" alt="Tác giả" class="favorite-post-author-img">
+                                    <div class="favorite-post-author-name">Lê Thị B • 18/01/2025</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="favorite-post-card">
+                            <img src="/api/placeholder/250/160" alt="Đồ ăn miền Trung" class="favorite-post-image">
+                            <div class="favorite-post-content">
+                                <div class="favorite-post-title">Ẩm thực đường phố miền Trung: Hành trình khám phá hương vị cay nồng</div>
+                                <div class="favorite-post-author">
+                                    <img src="/api/placeholder/30/30" alt="Tác giả" class="favorite-post-author-img">
+                                    <div class="favorite-post-author-name">Trần Văn C • 05/03/2025</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="favorite-post-card">
+                            <img src="/api/placeholder/250/160" alt="Du lịch miền Trung" class="favorite-post-image">
+                            <div class="favorite-post-content">
+                                <div class="favorite-post-title">Khám phá miền Trung trong 14 ngày với ngân sách hạn chế</div>
+                                <div class="favorite-post-author">
+                                    <img src="/api/placeholder/30/30" alt="Tác giả" class="favorite-post-author-img">
+                                    <div class="favorite-post-author-name">Phạm Thị D • 22/02/2025</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="favorite-post-card">
+                            <img src="/api/placeholder/250/160" alt="Phượt miền Trung" class="favorite-post-image">
+                            <div class="favorite-post-content">
+                                <div class="favorite-post-title">Kinh nghiệm phượt dọc miền Trung bằng xe máy an toàn</div>
+                                <div class="favorite-post-author">
+                                    <img src="/api/placeholder/30/30" alt="Tác giả" class="favorite-post-author-img">
+                                    <div class="favorite-post-author-name">Hoàng Văn E • 10/01/2025</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    
-    @* <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>TourismWeb</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Về chúng tôi</a></li>
-                    <li><a href="#">Điều khoản sử dụng</a></li>
-                    <li><a href="#">Chính sách bảo mật</a></li>
-                    <li><a href="#">Liên hệ</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h3>Khám phá</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Điểm đến nổi bật</a></li>
-                    <li><a href="#">Bài viết du lịch</a></li>
-                    <li><a href="#">Hướng dẫn du lịch</a></li>
-                    <li><a href="#">Cẩm nang du lịch</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h3>Theo dõi chúng tôi</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">YouTube</a></li>
-                    <li><a href="#">TikTok</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            © 2025 TourismWeb. Tất cả quyền được bảo lưu.
-        </div>
-    </footer> *@
 </body>
 </html>
-
