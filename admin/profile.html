@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Cá Nhân - Hệ Thống Quản Trị</title>
+    <meta name="description" content="Hệ thống quản trị bài viết du lịch">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="sidebar-title">ADMIN DASHBOARD</h1>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <i class="fas fa-home"></i>
+                            <span>Tổng Quan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="posts.html">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Quản Lý Bài Viết</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="comments.html">
+                            <i class="fas fa-comments"></i>
+                            <span>Đánh Giá & Bình Luận</span>
+                            <span class="badge">12</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="interactions.html">
+                            <i class="fas fa-heart"></i>
+                            <span>Tương Tác</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <i class="fas fa-flag"></i>
+                            <span>Báo Cáo</span>
+                            <span class="badge">5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="statistics.html">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Thống Kê</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="users.html">
+                            <i class="fas fa-users"></i>
+                            <span>Người Dùng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Cài Đặt</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-footer">
+                <button class="logout-button">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Đăng Xuất</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <main class="content-wrapper">
+                <div class="page-header">
+                    <h1 class="page-title">Hồ Sơ Cá Nhân</h1>
+                </div>
+
+                <div class="profile-container">
+                    <!-- Profile Header -->
+                    <div class="profile-header">
+                        <div class="profile-cover">
+                            <img src="https://via.placeholder.com/1200x300" alt="Cover Image">
+                            <button class="btn btn-icon change-cover-btn">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <div class="profile-info">
+                            <div class="profile-avatar">
+                                <img src="https://i.pravatar.cc/150?img=1" alt="Avatar">
+                                <button class="btn btn-icon change-avatar-btn">
+                                    <i class="fas fa-camera"></i>
+                                </button>
+                            </div>
+                            <div class="profile-details">
+                                <h2 class="profile-name">Nguyễn Văn A</h2>
+                                <p class="profile-role">Quản trị viên</p>
+                                <p class="profile-meta">
+                                    <span><i class="fas fa-envelope"></i> nguyenvana@example.com</span>
+                                    <span><i class="fas fa-phone"></i> +84 123 456 789</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Hà Nội, Việt Nam</span>
+                                </p>
+                            </div>
+                            <div class="profile-actions">
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-edit"></i>
+                                    Chỉnh sửa hồ sơ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Content -->
+                    <div class="profile-content">
+                        <div class="profile-tabs">
+                            <button class="tab-btn active" data-tab="info">Thông tin cá nhân</button>
+                            <button class="tab-btn" data-tab="activity">Hoạt động gần đây</button>
+                            <button class="tab-btn" data-tab="security">Bảo mật</button>
+                        </div>
+
+                        <div class="tab-content active" id="info">
+                            <div class="profile-section">
+                                <h3 class="section-title">Thông tin cơ bản</h3>
+                                <div class="profile-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="fullname">Họ và tên</label>
+                                            <input type="text" id="fullname" value="Nguyễn Văn A">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username">Tên đăng nhập</label>
+                                            <input type="text" id="username" value="nguyenvana" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" value="nguyenvana@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Số điện thoại</label>
+                                            <input type="tel" id="phone" value="+84 123 456 789">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="dob">Ngày sinh</label>
+                                            <input type="date" id="dob" value="1990-01-01">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="gender">Giới tính</label>
+                                            <select id="gender">
+                                                <option value="male" selected>Nam</option>
+                                                <option value="female">Nữ</option>
+                                                <option value="other">Khác</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile-section">
+                                <h3 class="section-title">Địa chỉ</h3>
+                                <div class="profile-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="address">Địa chỉ</label>
+                                            <input type="text" id="address" value="123 Đường ABC">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="city">Thành phố</label>
+                                            <input type="text" id="city" value="Hà Nội">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="country">Quốc gia</label>
+                                            <select id="country">
+                                                <option value="vn" selected>Việt Nam</option>
+                                                <option value="us">Hoa Kỳ</option>
+                                                <option value="jp">Nhật Bản</option>
+                                                <option value="kr">Hàn Quốc</option>
+                                                <option value="sg">Singapore</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="postal">Mã bưu điện</label>
+                                            <input type="text" id="postal" value="100000">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile-section">
+                                <h3 class="section-title">Giới thiệu</h3>
+                                <div class="profile-form">
+                                    <div class="form-group">
+                                        <label for="bio">Giới thiệu bản thân</label>
+                                        <textarea id="bio" rows="4">Tôi là quản trị viên của hệ thống quản trị bài viết du lịch. Tôi có hơn 5 năm kinh nghiệm trong lĩnh vực quản trị nội dung và SEO.</textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary">Hủy</button>
+                                <button type="button" class="btn btn-primary">Lưu thay đổi</button>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="activity">
+                            <div class="profile-section">
+                                <h3 class="section-title">Hoạt động gần đây</h3>
+                                <div class="activity-timeline">
+                                    <div class="activity-item">
+                                        <div class="activity-icon blue">
+                                            <i class="fas fa-edit"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <div class="activity-header">
+                                                <span class="activity-title">Chỉnh sửa bài viết</span>
+                                                <span class="activity-time">Hôm nay, 10:30</span>
+                                            </div>
+                                            <p class="activity-description">Bạn đã chỉnh sửa bài viết "Khám phá Đà Lạt mùa hoa".</p>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon green">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <div class="activity-header">
+                                                <span class="activity-title">Thêm bài viết mới</span>
+                                                <span class="activity-time">Hôm qua, 15:45</span>
+                                            </div>
+                                            <p class="activity-description">Bạn đã thêm bài viết mới "Top 10 nhà hàng ngon nhất tại Hội An".</p>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon amber">
+                                            <i class="fas fa-comment"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <div class="activity-header">
+                                                <span class="activity-title">Phản hồi bình luận</span>
+                                                <span class="activity-time">10/04/2023, 09:15</span>
+                                            </div>
+                                            <p class="activity-description">Bạn đã phản hồi bình luận của Trần Thị B trên bài viết "Cẩm nang du lịch Hội An tự túc".</p>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon red">
+                                            <i class="fas fa-trash"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <div class="activity-header">
+                                                <span class="activity-title">Xóa bài viết</span>
+                                                <span class="activity-time">08/04/2023, 14:20</span>
+                                            </div>
+                                            <p class="activity-description">Bạn đã xóa bài viết "Du lịch Phú Quốc mùa mưa".</p>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon purple">
+                                            <i class="fas fa-user-plus"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <div class="activity-header">
+                                                <span class="activity-title">Thêm người dùng mới</span>
+                                                <span class="activity-time">05/04/2023, 11:30</span>
+                                            </div>
+                                            <p class="activity-description">Bạn đã thêm người dùng mới "Lê Văn C" với vai trò "Tác giả".</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="security">
+                            <div class="profile-section">
+                                <h3 class="section-title">Đổi mật khẩu</h3>
+                                <div class="profile-form">
+                                    <div class="form-group">
+                                        <label for="current-password">Mật khẩu hiện tại</label>
+                                        <input type="password" id="current-password">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="new-password">Mật khẩu mới</label>
+                                            <input type="password" id="new-password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirm-password">Xác nhận mật khẩu mới</label>
+                                            <input type="password" id="confirm-password">
+                                        </div>
+                                    </div>
+                                    <div class="password-requirements">
+                                        <p>Mật khẩu phải đáp ứng các yêu cầu sau:</p>
+                                        <ul>
+                                            <li>Ít nhất 8 ký tự</li>
+                                            <li>Ít nhất 1 chữ hoa</li>
+                                            <li>Ít nhất 1 chữ thường</li>
+                                            <li>Ít nhất 1 số</li>
+                                            <li>Ít nhất 1 ký tự đặc biệt</li>
+                                        </ul>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-primary">Đổi mật khẩu</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile-section">
+                                <h3 class="section-title">Xác thực hai yếu tố</h3>
+                                <div class="profile-form">
+                                    <div class="two-factor-auth">
+                                        <div class="two-factor-header">
+                                            <div>
+                                                <h4>Xác thực hai yếu tố</h4>
+                                                <p>Bảo vệ tài khoản của bạn bằng cách yêu cầu xác thực thêm khi đăng nhập.</p>
+                                            </div>
+                                            <div class="toggle-switch">
+                                                <input type="checkbox" id="two-factor">
+                                                <label for="two-factor"></label>
+                                            </div>
+                                        </div>
+                                        <div class="two-factor-methods">
+                                            <div class="auth-method">
+                                                <div class="auth-method-icon">
+                                                    <i class="fas fa-mobile-alt"></i>
+                                                
+                                                </div>
+                                                <div class="auth-method-content">
+                                                    <h5>Ứng dụng xác thực</h5>
+                                                    <p>Sử dụng ứng dụng xác thực như Google Authenticator hoặc Authy.</p>
+                                                    <button class="btn btn-secondary btn-sm">Thiết lập</button>
+                                                </div>
+                                            </div>
+                                            <div class="auth-method">
+                                                <div class="auth-method-icon">
+                                                    <i class="fas fa-sms"></i>
+                                                </div>
+                                                <div class="auth-method-content">
+                                                    <h5>SMS</h5>
+                                                    <p>Nhận mã xác thực qua tin nhắn SMS.</p>
+                                                    <button class="btn btn-secondary btn-sm">Thiết lập</button>
+                                                </div>
+                                            </div>
+                                            <div class="auth-method">
+                                                <div class="auth-method-icon">
+                                                    <i class="fas fa-key"></i>
+                                                </div>
+                                                <div class="auth-method-content">
+                                                    <h5>Khóa bảo mật</h5>
+                                                    <p>Sử dụng khóa bảo mật vật lý như YubiKey.</p>
+                                                    <button class="btn btn-secondary btn-sm">Thiết lập</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile-section">
+                                <h3 class="section-title">Phiên đăng nhập</h3>
+                                <div class="profile-form">
+                                    <div class="sessions-list">
+                                        <div class="session-item current">
+                                            <div class="session-icon">
+                                                <i class="fas fa-laptop"></i>
+                                            </div>
+                                            <div class="session-details">
+                                                <div class="session-header">
+                                                    <h5>Windows 10 - Chrome</h5>
+                                                    <span class="session-badge">Hiện tại</span>
+                                                </div>
+                                                <p class="session-meta">
+                                                    <span>IP: 192.168.1.1</span>
+                                                    <span>Đăng nhập: Hôm nay, 09:15</span>
+                                                </p>
+                                            </div>
+                                            <div class="session-actions">
+                                                <button class="btn btn-text">Kết thúc</button>
+                                            </div>
+                                        </div>
+                                        <div class="session-item">
+                                            <div class="session-icon">
+                                                <i class="fas fa-mobile-alt"></i>
+                                            </div>
+                                            <div class="session-details">
+                                                <div class="session-header">
+                                                    <h5>Android - Chrome Mobile</h5>
+                                                </div>
+                                                <p class="session-meta">
+                                                    <span>IP: 192.168.1.2</span>
+                                                    <span>Đăng nhập: Hôm qua, 15:30</span>
+                                                </p>
+                                            </div>
+                                            <div class="session-actions">
+                                                <button class="btn btn-text">Kết thúc</button>
+                                            </div>
+                                        </div>
+                                        <div class="session-item">
+                                            <div class="session-icon">
+                                                <i class="fas fa-tablet-alt"></i>
+                                            </div>
+                                            <div class="session-details">
+                                                <div class="session-header">
+                                                    <h5>iPad - Safari</h5>
+                                                </div>
+                                                <p class="session-meta">
+                                                    <span>IP: 192.168.1.3</span>
+                                                    <span>Đăng nhập: 08/04/2023, 10:45</span>
+                                                </p>
+                                            </div>
+                                            <div class="session-actions">
+                                                <button class="btn btn-text">Kết thúc</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-danger">Kết thúc tất cả phiên khác</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>
