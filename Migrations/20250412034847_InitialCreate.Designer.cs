@@ -12,7 +12,7 @@ using TourismWeb.Models;
 namespace TourismWeb.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250411115132_InitialCreate")]
+    [Migration("20250412034847_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

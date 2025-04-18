@@ -30,20 +30,20 @@
         <!-- Main Content Area (8/10) -->
         <div class="main-content">
             <div class="featured-destinations">
-                <div class="destination-card">
-                    <div class="destination-image">
-                        <img src="~/images/hue.jpg" asp-append-version="true" alt="Huế">
-                        <div class="date-tag">15 Th01</div>
-                    </div>
-                    <div class="destination-content">
-                        <h3>Khám phá vẻ đẹp cổ kính của Đại Nội Huế - Kinh đô của triều Nguyễn</h3>
-                        <p>Đại Nội Huế - công trình kiến trúc đồ sộ được xây dựng từ thời vua Gia Long, là quần thể di
-                            tích lịch sử văn hóa đặc biệt quan trọng. Khu vực này gồm Hoàng thành và Tử Cấm thành với
-                            hơn 100 công trình đẹp mắt như điện Thái Hòa, Ngọ Môn, Hiển Lâm Các...</p>
-                    </div>
-                </div>
+                <a asp-controller="Guide" asp-action="Hue" class="destination-card">
+    <div class="destination-image">
+        <img src="~/images/hue.jpg" asp-append-version="true" alt="Huế">
+        <div class="date-tag">15 Th01</div>
+    </div>
+    <div class="destination-content">
+        <h3>Khám phá vẻ đẹp cổ kính của Đại Nội Huế - Kinh đô của triều Nguyễn</h3>
+        <p>Đại Nội Huế - công trình kiến trúc đồ sộ được xây dựng từ thời vua Gia Long, là quần thể di tích lịch sử
+            văn hóa đặc biệt quan trọng. Khu vực này gồm Hoàng thành và Tử Cấm thành với hơn 100 công trình đẹp mắt
+            như điện Thái Hòa, Ngọ Môn, Hiển Lâm Các...</p>
+    </div>
+</a>
 
-                <div class="destination-card">
+                <a asp-controller="Guide" asp-action="HoiAn" class="destination-card">
                     <div class="destination-image">
                         <img src="~/images/hoian.jpg" asp-append-version="true" alt="Phố cổ Hội An">
                         <div class="date-tag">22 Th02</div>
@@ -54,9 +54,9 @@
                             giới. Với những dãy phố đèn lồng rực rỡ, những ngôi nhà cổ mang đậm kiến trúc thời xưa và
                             những món ẩm thực đặc sắc như cao lầu, mì Quảng...</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="destination-card">
+               <a asp-controller="Guide" asp-action="DaNang" class="destination-card">
                     <div class="destination-image">
                         <img src="~/images/danang2.webp" asp-append-version="true" alt="Đà Nẵng">
                         <div class="date-tag">08 Th03</div>
@@ -67,8 +67,9 @@
                             tham quan nổi tiếng như Cầu Rồng phun lửa, Bà Nà Hills, Ngũ Hành Sơn. Đây còn được mệnh danh
                             là thành phố của những cây cầu với kiến trúc độc đáo...</p>
                     </div>
-                </div>
-            </div>
+                 </a>   
+            </div>    
+            
 
             <div class="more-destinations">
                 <h2>Khám Phá Điểm Đến</h2>
