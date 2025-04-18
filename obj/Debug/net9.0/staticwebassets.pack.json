@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\guide.css"
     },
     {
+      "Id": "E:\\PBL3\\wwwroot\\css\\guidelayout.css",
+      "PackagePath": "staticwebassets\\css\\guidelayout.css"
+    },
+    {
       "Id": "E:\\PBL3\\wwwroot\\css\\home.css",
       "PackagePath": "staticwebassets\\css\\home.css"
     },
